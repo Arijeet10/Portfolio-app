@@ -3,7 +3,7 @@ const ServiceCard = ({ service }) => {
 
   return (
     <>
-      <div className="relative border  shadow-2xl rounded-lg w-[400px] h-[400px] flex flex-col items-start justify-end gap-40 px-8 py-16">
+      <div className="bg-white relative border  shadow-2xl rounded-lg w-[400px] h-[400px] flex flex-col items-start justify-end gap-40 px-8 py-16">
         <div className="flex flex-col items-start gap-2 ">
           <div className="text-3xl font-bold">{service.name}</div>
           <div>{service.desc}</div>
