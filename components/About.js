@@ -32,7 +32,7 @@ const About = ({aboutData}) => {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-4 font-bold">
           <div className="flex flex-col md:flex-row md:gap-0 gap-4 items-center justify-center">
-            <button className="border-2 border-black rounded-full px-4 py-2">
+            <button className="border-2 border-black rounded-full px-4 py-2 hover:bg-green-500 hover:text-white">
               DOWNLOAD CV
             </button>
             <div className="hidden md:block w-20 border-t-2 border-black" />
