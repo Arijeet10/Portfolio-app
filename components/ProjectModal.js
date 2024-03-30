@@ -34,6 +34,7 @@ const ProjectModal = ({projectData,closeProjectModal}) => {
         </div>
         <div className="font-bold flex items-center justify-center gap-4">
         <Link 
+            onClick={closeProjectModal}
             href={projectData.githuburl} 
             className="border border-black rounded-full px-4 py-2 hover:bg-green-500 hover:text-white"
         
@@ -41,6 +42,7 @@ const ProjectModal = ({projectData,closeProjectModal}) => {
             GitHuB
         </Link>
         <Link 
+            onClick={closeProjectModal}
             href={projectData.liveurl}
             className="border border-black rounded-full px-4 py-2 hover:bg-green-500 hover:text-white"
         >
