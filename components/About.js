@@ -4,7 +4,7 @@ const About = ({aboutData}) => {
 
   return (
     <>
-      <div className="bg-[#faf5e1] flex flex-col gap-4">
+      <div className="bg-[#faf5e1] flex flex-col gap-4 py-8">
         <div className="text-center">
           From {aboutData.address}. {aboutData.subTitle}. {desc[0]}
         </div>

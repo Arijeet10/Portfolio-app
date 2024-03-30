@@ -4,7 +4,7 @@ const Contact = ({ contactData }) => {
   //console.log(contactData);
   return (
     <>
-      <div className="bg-[#faf5e1] flex flex-col gap-8">
+      <div className="bg-[#faf5e1] flex flex-col gap-8 py-8">
         <div className="font-bold flex flex-col items-center gap-4 ">
           <div className="text-5xl">CONTACT ME</div>
           <div className="flex items-end gap-4">
