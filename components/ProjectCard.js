@@ -19,7 +19,7 @@ const ProjectCard = ({ projectData }) => {
 
   return (
     <>
-      <div className="bg-slate-50 shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
+      <div className=" bg-slate-50 shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
         <div>
           <img
             src={projectData.image.url}
