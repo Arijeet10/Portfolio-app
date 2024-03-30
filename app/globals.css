@@ -2,32 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* profile name text styling */
+.firstname {
+    color: rgb(69, 199, 127);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+.lastname{
+    color:white;
+    -webkit-text-stroke-width:3px;
+    -webkit-text-stroke-color:black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* remove default scroll styling */
+.remove-scrollbar::-webkit-scrollbar{
+    display:none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* shadow style */
+.shadow-effect{
+    box-shadow: 8px 8px 2px 2px rgb(170, 169, 169);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
