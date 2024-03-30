@@ -8,21 +8,23 @@ import Testimonials from "@/components/Testimonials";
 import Timeline from "@/components/Timeline";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Home = async () => {
   const { user } = await getAPIData(); //get api data
   //console.log(user);
 
   //taking the skills only which are enabled
-  const enabledSkill=user.skills.map(item=>{
-    if(item.enabled==true){
+  const enabledSkill = user.skills.map((item) => {
+    if (item.enabled == true) {
       return item;
     }
-  })
+  });
 
   return (
     <>
-      <div>
+      <div className="p-4 bg-[#faf5e1]">
+        <Navbar />
         <Hero heroData={user.about} />
         <About aboutData={user.about} />
         <Services servicesData={user.services} />
