@@ -44,7 +44,7 @@ const ContactForm = () => {
           <input
             type="submit"
             onClick={(e) => e.preventDefault()}
-            className="border border-black rounded-full text-xl font-bold px-8 py-4 shadow-effect"
+            className="border border-black rounded-full text-xl font-bold px-8 py-4 shadow-effect hover:bg-green-500 hover:text-white"
             value="SEND MESSAGE"
           />
         </div>
