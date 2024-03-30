@@ -6,7 +6,7 @@ const Services = ({servicesData}) => {
     //console.log(servicesData);
     return ( 
         <>
-            <div className="bg-[#faf5e1] flex flex-col gap-6 p-8">
+            <div className="bg-[#faf5e1] flex flex-col gap-6 py-8">
                 <div className="font-bold flex flex-col items-center gap-2">
                     <div className="text-5xl">
                         WHAT I DO
