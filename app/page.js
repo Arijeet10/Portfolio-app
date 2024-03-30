@@ -23,7 +23,7 @@ const Home = async () => {
 
   return (
     <>
-      <div className="p-4 bg-[#faf5e1]">
+      <div className="p-2 sm:p-4 bg-[#faf5e1]">
         <Navbar />
         <Hero heroData={user.about} />
         <About aboutData={user.about} />
