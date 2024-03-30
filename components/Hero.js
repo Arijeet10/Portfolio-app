@@ -8,8 +8,7 @@ const Hero = ({ heroData }) => {
 
   return (
     <>
-      <div className=" py-8">
-        <div className="flex flex-col md:flex-row md:justify-evenly items-center  gap-4">
+        <div className="flex flex-col md:flex-row md:justify-evenly items-center py-8 gap-4">
           <div className="flex flex-col items-center justify-center md:items-start gap-4">
             <div className="text-l font-bold uppercase">
               HELLO, <span className="text-green-500">MY NAME IS</span>
@@ -27,7 +26,6 @@ const Hero = ({ heroData }) => {
           </div>
           <HeroBanner heroData={heroData} />
         </div>
-      </div>
     </>
   );
 };
