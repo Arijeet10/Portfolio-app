@@ -24,8 +24,8 @@ const ProjectModal = ({projectData,closeProjectModal}) => {
         <div className="flex flex-col items-start gap-4">
           <div className="font-bold">
             <div className="text-green-500 uppercase">
-              {projectData.techStack.map((item) => {
-                return <span>{item}, </span>;
+              {projectData.techStack.map((item,i) => {
+                return <span>{i!==0&&", "}{item}</span>;
               })}
             </div>
             <div className="text-2xl">{projectData.title}</div>
