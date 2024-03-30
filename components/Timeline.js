@@ -16,7 +16,7 @@ const Timeline = ({ timelineData }) => {
 
   return (
     <>
-      <div className="bg-[#faf5e1] py-8">
+      <div className=" py-8">
         <div className="font-bold flex flex-col items-center">
           <div className="text-3xl sm:text-5xl ">TIMELINE</div>
           <div className="flex items-end gap-4">

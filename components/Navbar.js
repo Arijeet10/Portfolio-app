@@ -1,7 +1,7 @@
 const Navbar = () => {
     return ( 
         <>
-            <div className="bg-[#faf5e1] flex items-center justify-between">
+            <div className="flex items-center justify-between">
                 <div className="text-5xl font-extrabold flex items-center">SARKAR <span className="text-green-500 text-base">○</span></div>
                 <div>
                     <img 

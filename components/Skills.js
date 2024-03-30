@@ -4,7 +4,7 @@ const Skills = ({skillsData}) => {
     //console.log(skillsData)
     return ( 
         <>
-            <div className="bg-[#faf5e1] py-8">
+            <div className=" py-8">
                 <div className="font-bold flex flex-col items-center gap-4">
                     <div className="text-2xl sm:text-5xl">PROFESSIONAL SKILLS</div>
                     <div className="flex items-end justify-center gap-4">

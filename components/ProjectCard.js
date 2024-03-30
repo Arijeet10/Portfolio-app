@@ -29,7 +29,7 @@ const ProjectCard = ({ projectData }) => {
         </div>
         <div className="flex items-center justify-between">
         <div className="text-2xl font-bold hover:text-green-500">{projectData.title}</div>
-        <button onClick={openProjectModal} className="font-bold text-xl hover:text-green-500 hover:border hover:border-black hover:rounded-full hover:bg-black hover:px-4 hover:py-2">See project</button>
+        <button onClick={openProjectModal} className="font-bold text-xl hover:text-white hover:border hover:border-black hover:rounded-full hover:bg-green-500 hover:px-4 hover:py-2">See project</button>
         </div>
 
       </div>
