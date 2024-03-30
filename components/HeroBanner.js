@@ -5,7 +5,7 @@ const HeroBanner = ({ heroData }) => {
         <img
           src={heroData.alternateAvatars[0].url}
           alt="profile image"
-          className=" rounded-full w-screen lg:relative lg:-top-28"
+          className=" rounded-full"
         />
         <button className="absolute bottom-[150px] -left-[5px] flex items-center justify-center gap-2 px-4 py-2 bg-white border border-black rounded-full">
           <span className="flex items-start text-5xl">

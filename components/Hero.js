@@ -8,8 +8,8 @@ const Hero = ({ heroData }) => {
 
   return (
     <>
-      <div className="flex flex-col gap-4 py-8">
-        <div className="md:flex md:items-start overflow">
+      <div className=" py-8">
+        <div className="flex flex-col md:flex-row md:justify-evenly items-center  gap-4">
           <div className="flex flex-col items-center justify-center md:items-start gap-4">
             <div className="text-l font-bold uppercase">
               HELLO, <span className="text-green-500">MY NAME IS</span>
