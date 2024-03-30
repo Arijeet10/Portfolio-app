@@ -9,6 +9,7 @@ import Timeline from "@/components/Timeline";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ProjectModal from "@/components/ProjectModal";
 
 const Home = async () => {
   const { user } = await getAPIData(); //get api data
@@ -23,7 +24,7 @@ const Home = async () => {
 
   return (
     <>
-      <div className="p-2 sm:p-4 bg-[#faf5e1]">
+      {/* <div className="p-2 sm:p-4 bg-[#faf5e1]">
         <Navbar />
         <Hero heroData={user.about} />
         <About aboutData={user.about} />
@@ -34,7 +35,9 @@ const Home = async () => {
         <Testimonials testimonialData={user.testimonials} />
         <Contact contactData={user.about} />
         <Footer />
-      </div>
+      </div> */}
+      {/* <ProjectModal projectData={user.projects[0]} /> */}
+      <Projects projectData={user.projects} />
     </>
   );
 };

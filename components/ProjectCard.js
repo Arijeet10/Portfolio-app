@@ -1,7 +1,25 @@
+"use client";
+
+import { useState } from "react";
+import ProjectModal from "./ProjectModal";
+
 const ProjectCard = ({ projectData }) => {
+
+
+  const [modal,setModal]=useState(false);
+  const openProjectModal=(e)=>{
+    e.preventDefault();
+    setModal(true);
+  }
+
+  const closeProjectModal=(e)=>{
+    e.preventDefault();
+    setModal(false);
+  }
+
   return (
     <>
-      <div className="shadow-2xl border border-black rounded-lg p-2 flex flex-col items-start gap-8">
+      <div className="bg-slate-50 shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
         <div>
           <img
             src={projectData.image.url}
@@ -9,19 +27,14 @@ const ProjectCard = ({ projectData }) => {
             className="rounded-lg object-cover"
           />
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="font-bold">
-            <div className="text-green-500 uppercase">
-              {projectData.techStack.map((item) => {
-                return <span>{item}, </span>;
-              })}
-            </div>
-            <div className="text-2xl">{projectData.title}</div>
-          </div>
-          <div>{projectData.description}</div>
+        <div className="flex items-center justify-between">
+        <div className="text-2xl font-bold hover:text-green-500">{projectData.title}</div>
+        <button onClick={openProjectModal} className="font-bold text-xl hover:text-green-500 hover:border hover:border-black hover:rounded-full hover:bg-black hover:px-4 hover:py-2">See project</button>
         </div>
-        <button className="font-bold">See project</button>
+
       </div>
+      {modal&&<div className="modal-backdrop" />}
+      {modal&&<ProjectModal projectData={projectData} closeProjectModal={closeProjectModal} />}
     </>
   );
 };

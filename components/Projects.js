@@ -22,15 +22,17 @@ const Projects = ({projectData}) => {
                 </div>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4">
                     {projectData.map((item,i)=>{
+                        
                         if(i<6){
-                            return <ProjectCard projectData={item} />
+                            const revOrder=projectData[projectData.length-1-i];
+                            return <ProjectCard projectData={revOrder} />
                         }
                     })}
                 </div>
 
                 <Link 
                     href="/projects"
-                    className="border border-black rounded-full font-bold px-8 py-4 shadow-effect hover:bg-green-500 hover:text-white"
+                    className="border border-black rounded-full font-bold px-4 py-4 shadow-effect hover:bg-green-500 hover:text-white"
                 >
                     VIEW MORE
                 </Link>
