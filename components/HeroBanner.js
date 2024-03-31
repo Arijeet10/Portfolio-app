@@ -1,7 +1,17 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const HeroBanner = ({ heroData }) => {
   return (
     <>
-      <div className="relative px-16 ">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="relative px-16 "
+      >
         <img
           src={heroData.alternateAvatars[0].url}
           alt="profile image"
@@ -26,7 +36,7 @@ const HeroBanner = ({ heroData }) => {
             <span className="text-green-500">PROJECTS</span>
           </span>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

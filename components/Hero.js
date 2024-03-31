@@ -9,14 +9,14 @@ const Hero = ({ heroData }) => {
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, scale: 0, y: [-100] }}
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className=" flex flex-col lg:flex-row lg:justify-evenly items-center py-8 gap-4"
-      >
-        <div className="flex flex-col items-center justify-center md:items-start gap-4">
+      <div className=" flex flex-col lg:flex-row lg:justify-evenly items-center py-8 gap-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0, x: [-200] }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center md:items-start gap-4"
+        >
           <div className="text-l font-bold uppercase">
             HELLO, <span className="text-green-500">MY NAME IS</span>
           </div>
@@ -27,9 +27,9 @@ const Hero = ({ heroData }) => {
           <div className="font-semibold">
             I am <span className="text-xl font-semibold">{heroData.title}</span>
           </div>
-        </div>
+        </motion.div>
         <HeroBanner heroData={heroData} />
-      </motion.div>
+      </div>
     </>
   );
 };
