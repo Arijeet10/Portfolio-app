@@ -10,7 +10,7 @@ const HeroBanner = ({ heroData }) => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="relative lg:absolute lg:-top-20 lg:right-5 px-16 z-50"
+        className="relative lg:absolute lg:-top-20 lg:right-5 px-16"
       >
         <img
           src={heroData.alternateAvatars[0].url}
