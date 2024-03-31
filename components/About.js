@@ -1,14 +1,19 @@
 "use client";
 
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
-const About = ({aboutData}) => {
-
-    const desc = aboutData.description.split(" I pride myself"); //remove extra description texts
+const About = ({ aboutData }) => {
+  const desc = aboutData.description.split(" I pride myself"); //remove extra description texts
 
   return (
     <>
-      <div className="flex flex-col gap-4 py-8">
+      <motion.div
+        initial={{ opacity: 0, scale: 0, y: [100] }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex flex-col gap-4 py-8"
+      >
         <div className="text-center">
           From {aboutData.address}. {aboutData.subTitle}. {desc[0]}
         </div>
@@ -36,9 +41,9 @@ const About = ({aboutData}) => {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-4 font-bold">
           <div className="flex flex-col md:flex-row md:gap-0 gap-4 items-center justify-center">
-            <motion.button 
-              whileHover={{scale:1.1}}
-              transition={{type:"spring",stiffness:"400",damping:"10"}}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: "400", damping: "10" }}
               className="border-2 border-black rounded-full px-4 py-2 hover:bg-green-500 hover:text-white"
             >
               DOWNLOAD CV
@@ -48,7 +53,7 @@ const About = ({aboutData}) => {
           </div>
           <div>MY SKILLS</div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

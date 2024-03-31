@@ -12,7 +12,9 @@ const Projects = ({ projectData }) => {
 
   return (
     <>
-      <div className="  flex flex-col items-center gap-4 py-8">
+      <div
+        className="  flex flex-col items-center gap-4 py-8"
+      >
         <div className="flex flex-col gap-4 items-center font-bold">
           <div className="text-3xl sm:text-5xl">PROJECTS</div>
           <div className="flex items-end gap-4">

@@ -1,10 +1,17 @@
 import ContactForm from "./ContactForm";
+import { motion } from "framer-motion";
 
 const Contact = ({ contactData }) => {
   //console.log(contactData);
   return (
     <>
-      <div className="flex flex-col gap-8 py-8">
+      <motion.div
+        initial={{ opacity: 0, scale: 0, y: [100] }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex flex-col gap-8 py-8"
+      >
         <div className="font-bold flex flex-col items-center gap-4 ">
           <div className="text-5xl">CONTACT ME</div>
           <div className="flex items-end gap-4">
@@ -46,10 +53,10 @@ const Contact = ({ contactData }) => {
             </div>
           </div>
           <div>
-          <ContactForm />
+            <ContactForm />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
