@@ -43,7 +43,7 @@ const Navbar = () => {
               <div className="border-l-2 border-black h-full" />
               <div className="border-2 border-black rounded-full p-4" />
             </div>
-            <div className="text-2xl font-bold flex flex-col items-center justify-center gap-4">
+            <div className="text-2xl font-bold flex flex-col items-center justify-center">
               <Link href="/" className="hover:text-green-500">
                 HOME
               </Link>
