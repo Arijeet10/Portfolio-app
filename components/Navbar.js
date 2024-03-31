@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 px-2">
+    <div className="sticky top-0 p-2">
       <div className=" flex items-center justify-between">
         <div className="text-5xl font-extrabold flex items-center">
           SARKAR <span className="text-green-500 text-base">○</span>
@@ -43,7 +43,7 @@ const Navbar = () => {
               <div className="border-l-2 border-black h-full" />
               <div className="border-2 border-black rounded-full p-4" />
             </div>
-            <div onClick={closeNavbar} className="text-2xl font-bold flex flex-col items-center justify-start gap-6">
+            <div onClick={closeNavbar} className="text-base sm:text-2xl font-bold flex flex-col items-center justify-start gap-6">
               <Link href="/" className="hover:text-green-500">
                 HOME
               </Link>
