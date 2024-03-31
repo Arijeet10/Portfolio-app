@@ -8,7 +8,7 @@ const Hero = ({ heroData }) => {
 
   return (
     <>
-        <div className="flex flex-col lg:flex-row lg:justify-evenly items-center py-8 gap-4">
+        <div className=" flex flex-col lg:flex-row lg:justify-evenly items-center py-8 gap-4">
           <div className="flex flex-col items-center justify-center md:items-start gap-4">
             <div className="text-l font-bold uppercase">
               HELLO, <span className="text-green-500">MY NAME IS</span>

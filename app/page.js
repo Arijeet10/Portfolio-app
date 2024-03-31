@@ -25,7 +25,7 @@ const Home = async () => {
 
   return (
     <>
-      <div className="">
+      <div className=" p-2 sm:p-4 ">
         <Hero heroData={user.about} />
         <div id="about">
           <About aboutData={user.about} />

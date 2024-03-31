@@ -31,19 +31,19 @@ const Navbar = () => {
         </div>
       </div>
       {navigation && (
-        <div className="flex flex-col gap-20 z-50 absolute top-0 right-0 h-screen w-2/4 sm:w-[500px] px-4 py-8 bg-white ">
-          <div className=" h-36 flex items-start justify-end">
+        <div className="flex flex-col justify-start z-50 absolute top-0 right-0 h-screen w-2/4 sm:w-[500px] px-2 py-4 bg-white ">
+          <div className=" h-20 flex items-start justify-end">
             <button onClick={closeNavbar} className="">
               <img src="/close.png" alt="close icon" className="w-10 h-10" />
             </button>
           </div>
-          <div className="flex justify-center gap-8">
+          <div className="flex justify-center">
             <div className="flex flex-col items-center">
               <div className="border-2 border-black rounded-full p-4" />
               <div className="border-l-2 border-black h-full" />
               <div className="border-2 border-black rounded-full p-4" />
             </div>
-            <div onClick={closeNavbar} className="text-2xl font-bold flex flex-col items-center justify-center">
+            <div onClick={closeNavbar} className="text-2xl font-bold flex flex-col items-center justify-start gap-6">
               <Link href="/" className="hover:text-green-500">
                 HOME
               </Link>
