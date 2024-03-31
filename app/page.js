@@ -22,20 +22,34 @@ const Home = async () => {
     }
   });
 
+
   return (
     <>
-      <div className="p-2 sm:p-4 bg-yellow-50">
-        <Navbar />
+      <div className="">
         <Hero heroData={user.about} />
-        <About aboutData={user.about} />
-        <Services servicesData={user.services} />
-        <Skills skillsData={enabledSkill} />
-        <Projects projectData={user.projects} />
-        <Timeline timelineData={user.timeline} />
-        <Testimonials testimonialData={user.testimonials} />
-        <Contact contactData={user.about} />
-        <Footer />
+        <div id="about">
+          <About aboutData={user.about} />
+        </div>
+        <div id="services">
+          <Services servicesData={user.services} />
+        </div>
+        <div id="skills">
+          <Skills skillsData={enabledSkill} />
+        </div>
+        <div id="projects">
+          <Projects projectData={user.projects} />
+        </div>
+        <div id="timeline">
+          <Timeline timelineData={user.timeline} />
+        </div>
+        <div id="testimonials">
+          <Testimonials testimonialData={user.testimonials} />
+        </div>
+        <div id="contact">
+          <Contact contactData={user.about} />
+        </div>
       </div>
+
       {/* <ProjectModal projectData={user.projects[0]} /> */}
       {/* <Projects projectData={user.projects} /> */}
     </>
