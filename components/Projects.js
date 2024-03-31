@@ -25,7 +25,7 @@ const Projects = ({projectData}) => {
                         
                         if(i<6){
                             const revOrder=projectData[projectData.length-1-i];
-                            return <ProjectCard projectData={revOrder} />
+                            return <ProjectCard projectData={revOrder} key={i} />
                         }
                     })}
                 </div>

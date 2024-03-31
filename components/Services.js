@@ -17,8 +17,8 @@ const Services = ({servicesData}) => {
                     </div>
                 </div>
                 <div className="grid grid-flow-col gap-6  overflow-scroll remove-scrollbar">
-                    {servicesData.map(item=>{
-                        return <ServiceCard service={item} />
+                    {servicesData.map((item,i)=>{
+                        return <ServiceCard service={item} key={i} />
                     })}
                 </div>
                 {/* <ServiceCard service={servicesData[3]} /> */}

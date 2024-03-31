@@ -29,8 +29,8 @@ const Timeline = ({ timelineData }) => {
             <div className="text-center text-2xl font-bold">Education</div>
             <div className="border-t-2 border-black w-full" />
             <div>
-              {educationData.map((item) => {
-                return <EducationCard educationData={item} />;
+              {educationData.map((item,i) => {
+                return <EducationCard educationData={item} key={i} />;
               })}
             </div>
           </div>
@@ -38,8 +38,8 @@ const Timeline = ({ timelineData }) => {
             <div className="text-center text-2xl font-bold">Experience</div>
             <div className="border-t-2 border-black w-full" />
             <div>
-              {experienceData.map((item) => {
-                return <ExperienceCard experienceData={item} />;
+              {experienceData.map((item,i) => {
+                return <ExperienceCard experienceData={item} key={i} />;
               })}
             </div>
           </div>

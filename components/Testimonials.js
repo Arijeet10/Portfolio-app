@@ -12,8 +12,8 @@ const Testimonials = ({testimonialData}) => {
                     </div>
                 </div>
                 <div className="grid grid-flow-col grid-rows-1 gap-8 overflow-scroll remove-scrollbar">
-                    {testimonialData.map(item=>{
-                        return <TestimonialCard testimonialData={item} />
+                    {testimonialData.map((item,i)=>{
+                        return <TestimonialCard testimonialData={item} key={i} />
                     })}
                 </div>
                 {/* <div>
