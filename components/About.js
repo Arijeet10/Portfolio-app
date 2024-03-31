@@ -1,3 +1,7 @@
+"use client";
+
+import {motion} from "framer-motion";
+
 const About = ({aboutData}) => {
 
     const desc = aboutData.description.split(" I pride myself"); //remove extra description texts
@@ -32,9 +36,13 @@ const About = ({aboutData}) => {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-4 font-bold">
           <div className="flex flex-col md:flex-row md:gap-0 gap-4 items-center justify-center">
-            <button className="border-2 border-black rounded-full px-4 py-2 hover:bg-green-500 hover:text-white">
+            <motion.button 
+              whileHover={{scale:1.1}}
+              transition={{type:"spring",stiffness:"400",damping:"10"}}
+              className="border-2 border-black rounded-full px-4 py-2 hover:bg-green-500 hover:text-white"
+            >
               DOWNLOAD CV
-            </button>
+            </motion.button>
             <div className="hidden md:block w-20 border-t-2 border-black" />
             <div className="block md:hidden border-l-2 border-black h-20" />
           </div>

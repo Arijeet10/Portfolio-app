@@ -1,5 +1,7 @@
 "use client";
 
+import {motion} from "framer-motion";
+
 const ContactForm = () => {
   return (
     <>
@@ -41,7 +43,9 @@ const ContactForm = () => {
         </div>
         <div className="flex flex-col items-end sm:flex-row sm:items-start justify-end">
             <span>*Accept the terms and conditions.</span>
-          <input
+          <motion.input
+            whileHover={{scale:[0.7,1]}}
+            transition={{type:"spring",stiffness:100,damping:10}}
             type="submit"
             onClick={(e) => e.preventDefault()}
             className="border border-black rounded-full text-xl font-bold px-8 py-4 shadow-effect hover:bg-green-500 hover:text-white"
