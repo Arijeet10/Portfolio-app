@@ -9,7 +9,7 @@ const Hero = ({ heroData }) => {
 
   return (
     <>
-      <div className="    py-8 gap-4">
+      <div className="flex flex-col py-8 gap-4">
         <motion.div
           initial={{opacity:0,scale:0,x:-100}}
           animate={{opacity:1,scale:1,x:0}}
