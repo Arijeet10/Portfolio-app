@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const [hover, setHover] = useState(false);
+  //const [scroll, setScroll] = useState(false);
 
   const [navigation, setNavigation] = useState(false);
 
@@ -23,12 +23,12 @@ const Navbar = () => {
     <>
       <motion.div
         // initial={{ y: 0 }}
-        // animate={hover && { y: [-1000, 0] }}
+        // animate={scroll && { y: [-1000, 0] }}
         // transition={{
         //   duration: "1",
         //   delay: "1",
         // }}
-        // whileHover={() => setHover(true)}
+        // onScroll={() => setScroll(true)}
         className="sticky top-0 z-50"
       >
         <div className=" flex items-center justify-between">
