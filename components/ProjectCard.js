@@ -20,7 +20,11 @@ const ProjectCard = ({ projectData }) => {
 
   return (
     <>
-      <div className=" bg-yellow-50 shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
+      <motion.div 
+        whileHover={{scale:1.1}}
+        transition={{type:"spring",stiffness:100}}
+        className=" bg-yellow-50 shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8"
+      >
         <div>
           <motion.img
             whileHover={!modal && {scale:[0.8,1]}}
@@ -33,10 +37,17 @@ const ProjectCard = ({ projectData }) => {
         </div>
         <div className="flex items-center justify-between">
         <div className="text-2xl font-bold hover:text-green-500">{projectData.title}</div>
-        <button onClick={openProjectModal} className="font-bold text-xl hover:text-white hover:border hover:border-black hover:rounded-full hover:bg-green-500 hover:px-4 hover:py-2">See project</button>
+        <motion.button
+         whileHover={{scale:1.1}}
+         transition={{type:"spring",stiffness:400,damping:10}}
+         onClick={openProjectModal} 
+         className="font-bold text-xl hover:text-white hover:border hover:border-black hover:rounded-full hover:bg-green-500 hover:px-4 hover:py-2"
+        >
+          See project
+        </motion.button>
         </div>
 
-      </div>
+      </motion.div>
       {modal&&<div className="modal-backdrop z-50" />}
       {modal&&<ProjectModal projectData={projectData} closeProjectModal={closeProjectModal} />}
     </>
