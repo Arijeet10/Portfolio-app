@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const ExperienceCard = ({ experienceData }) => {
   const startDate = experienceData.startDate.split("-");
@@ -26,8 +27,49 @@ const ExperienceCard = ({ experienceData }) => {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <div className="font-bold text-2xl">{experienceData.company_name}</div>
-        <div
+        <motion.div
+          animate={{ x: [-100, 0] }}
+          transition={{
+            duration: "1",
+          }}
+          className="font-bold text-2xl"
+        >
+          {experienceData.company_name}
+        </motion.div>
+
+        {!hideData && (
+          <motion.div
+            animate={
+              hideData
+                ? { y: [50, 0], transitionEnd: { display: "block" } }
+                : { y: [-50, 0], transitionEnd: { display: "none" } }
+            }
+            transition={{
+              duration: "1",
+            }}
+            className=""
+          >
+            <div
+              className={`flex flex-col justify-center items-start font-bold`}
+            >
+              <div>{experienceData.jobTitle}</div>
+              <div>
+                {startYear}-{endYear}, {jobCity.toUpperCase()}
+              </div>
+            </div>
+            <div className={``}>{experienceData.summary}</div>
+
+            <div className={`m-4 `}>
+              <ul className="list-disc">
+                {experienceData.bulletPoints.map((item) => {
+                  return <li>{item}</li>;
+                })}
+              </ul>
+            </div>
+          </motion.div>
+        )}
+
+        {/* <div
           className={`${
             hideData && "hidden"
           } flex flex-col justify-center items-start font-bold`}
@@ -47,8 +89,14 @@ const ExperienceCard = ({ experienceData }) => {
               return <li>{item}</li>;
             })}
           </ul>
-        </div>
-        <div className="flex items-center justify-center">
+        </div> */}
+        <motion.div
+          animate={hideData ? { y: [30, 0] } : { y: [-50, 0] }}
+          transition={{
+            duration: "1",
+          }}
+          className="flex items-center justify-center"
+        >
           <div className="border-t-2 border-black w-full" />
           <button
             onClick={handleClick}
@@ -56,7 +104,7 @@ const ExperienceCard = ({ experienceData }) => {
           >
             {hideData ? "+" : "-"}
           </button>
-        </div>
+        </motion.div>
       </div>
     </>
   );

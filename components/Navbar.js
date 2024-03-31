@@ -60,11 +60,17 @@ const Navbar = () => {
               </button>
             </div>
             <div className="flex justify-center">
-              <div className="flex flex-col items-center">
+              <motion.div
+                animate={{x:[-100,0]}}
+                transition={{
+                  duration:"0.7"
+                }} 
+                className="flex flex-col items-center"
+              >
                 <div className="border-2 border-black rounded-full p-4" />
                 <div className="border-l-2 border-black h-full" />
                 <div className="border-2 border-black rounded-full p-4" />
-              </div>
+              </motion.div>
               <motion.div
                 animate={{x:[100,0]}}
                 transition={{

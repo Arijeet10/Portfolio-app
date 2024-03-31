@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
+import {motion} from "framer-motion";
 
 const ProjectCard = ({ projectData }) => {
 
@@ -21,7 +22,10 @@ const ProjectCard = ({ projectData }) => {
     <>
       <div className=" bg-yellow-50 shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
         <div>
-          <img
+          <motion.img
+            whileHover={{scale:[0.8,1]}}
+            transition={{ type: "spring", stiffness: 100 }}
+
             src={projectData.image.url}
             alt="project image"
             className="rounded-lg object-cover"
