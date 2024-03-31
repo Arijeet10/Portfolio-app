@@ -13,7 +13,7 @@ const Testimonials = ({ testimonialData }) => {
             <span className="text:xl sm:text-3xl">Customers Say</span>
           </div>
         </div>
-        <div className="grid grid-flow-col grid-rows-1 gap-8 overflow-scroll remove-scrollbar">
+        <div className="grid grid-flow-col grid-rows-1 gap-8 px-20 overflow-scroll remove-scrollbar">
           {testimonialData.map((item, i) => {
             return <TestimonialCard testimonialData={item} key={i} />;
           })}
