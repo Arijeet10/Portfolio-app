@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 ">
+    <div className="sticky top-0 px-2">
       <div className=" flex items-center justify-between">
         <div className="text-5xl font-extrabold flex items-center">
           SARKAR <span className="text-green-500 text-base">○</span>
@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
       </div>
       {navigation && (
-        <div className="flex flex-col justify-start z-50 absolute top-0 right-0 h-screen w-2/4 sm:w-[500px] px-2 py-4 bg-white ">
+        <div className="flex flex-col justify-start z-50 fixed top-0 right-0 h-screen w-2/4 sm:w-[500px] px-2 py-4 bg-white ">
           <div className=" h-20 flex items-start justify-end">
             <button onClick={closeNavbar} className="">
               <img src="/close.png" alt="close icon" className="w-10 h-10" />
@@ -47,25 +47,25 @@ const Navbar = () => {
               <Link href="/" className="hover:text-green-500">
                 HOME
               </Link>
-              <Link href="#about" className="hover:text-green-500" >
+              <Link href="/#about" className="hover:text-green-500" >
                 ABOUT
               </Link>
-              <Link href="#services" className="hover:text-green-500">
+              <Link href="/#services" className="hover:text-green-500">
                 SERVICES
               </Link>
-              <Link href="#skills" className="hover:text-green-500">
+              <Link href="/#skills" className="hover:text-green-500">
                 SKILLS
               </Link>
-              <Link href="#projects" className="hover:text-green-500">
+              <Link href="/#projects" className="hover:text-green-500">
                 PROJECTS
               </Link>
-              <Link href="#timeline" className="hover:text-green-500">
+              <Link href="/#timeline" className="hover:text-green-500">
                 TIMELINE
               </Link>
-              <Link href="#testimonials" className="hover:text-green-500">
+              <Link href="/#testimonials" className="hover:text-green-500">
                 TESTIMONIALS
               </Link>
-              <Link href="#contact" className="hover:text-green-500">
+              <Link href="/#contact" className="hover:text-green-500">
                 CONTACT
               </Link>
             </div>
