@@ -23,8 +23,8 @@ const ProjectCard = ({ projectData }) => {
       <div className=" bg-yellow-50 shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
         <div>
           <motion.img
-            whileHover={{scale:[0.8,1]}}
-            transition={{ type: "spring", stiffness: 100 }}
+            whileHover={!modal && {scale:[0.8,1]}}
+            transition={!modal && { type: "spring", stiffness: 100 }}
 
             src={projectData.image.url}
             alt="project image"
@@ -37,7 +37,7 @@ const ProjectCard = ({ projectData }) => {
         </div>
 
       </div>
-      {modal&&<div className="modal-backdrop" />}
+      {modal&&<div className="modal-backdrop z-50" />}
       {modal&&<ProjectModal projectData={projectData} closeProjectModal={closeProjectModal} />}
     </>
   );

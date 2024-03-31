@@ -3,7 +3,7 @@ import Link from "next/link";
 const ProjectModal = ({projectData,closeProjectModal}) => {
     return ( 
         <>
-      <div className="bg-slate-50 absolute w-full sm:w-2/4  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
+      <div className="z-50 bg-slate-50 absolute w-full sm:w-2/4  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] shadow-2xl border border-black rounded-lg p-4 flex flex-col gap-8">
         <div>
             <div
                 onClick={closeProjectModal}
