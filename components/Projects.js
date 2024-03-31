@@ -12,9 +12,7 @@ const Projects = ({ projectData }) => {
 
   return (
     <>
-      <div
-        className="  flex flex-col items-center gap-4 py-8"
-      >
+      <div className="  flex flex-col items-center gap-4 py-8">
         <div className="flex flex-col gap-4 items-center font-bold">
           <div className="text-3xl sm:text-5xl">PROJECTS</div>
           <div className="flex items-end gap-4">
@@ -22,14 +20,20 @@ const Projects = ({ projectData }) => {
             <span className="text-l sm:text-3xl">Cases</span>
           </div>
         </div>
-        <div className="relative grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0, y: [100] }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="relative grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4"
+        >
           {projectData.map((item, i) => {
             if (i < 6) {
               const revOrder = projectData[projectData.length - 1 - i];
               return <ProjectCard projectData={revOrder} key={i} />;
             }
           })}
-        </div>
+        </motion.div>
         <Link href="/projects">
           <motion.div
             whileHover={{ scale: 1.1 }}

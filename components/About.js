@@ -14,7 +14,7 @@ const About = ({ aboutData }) => {
         viewport={{ once: true }}
         className="flex flex-col gap-4 py-8"
       >
-        <div className="text-center">
+        <div className="text-center md:text-start break-all md:w-2/4">
           From {aboutData.address}. {aboutData.subTitle}. {desc[0]}
         </div>
         <div className="flex items-center justify-start gap-2">
