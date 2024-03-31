@@ -1,6 +1,15 @@
+"use client";
+
 import TestimonialCard from "./TestimonialCard";
+import { useEffect, useRef, useState } from "react";
+import Marquee from "react-fast-marquee";
 
 const Testimonials = ({ testimonialData }) => {
+
+  const [hover,setHover]=useState(false);
+
+  
+
   return (
     <>
       <div
@@ -13,11 +22,20 @@ const Testimonials = ({ testimonialData }) => {
             <span className="text:xl sm:text-3xl">Customers Say</span>
           </div>
         </div>
-        <div className="grid grid-flow-col grid-rows-1 gap-8 px-8 sm:px-20 overflow-scroll remove-scrollbar">
+        <Marquee
+          play={hover}
+          pauseOnClick
+        >
+        <div
+          onMouseEnter={()=>setHover(true)}
+          onMouseLeave={()=>setHover(false)}
+          className="grid grid-flow-col grid-rows-1 gap-8 px-8 sm:px-16  overflow-scroll remove-scrollbar"
+        >
           {testimonialData.map((item, i) => {
             return <TestimonialCard testimonialData={item} key={i} />;
           })}
         </div>
+        </Marquee>
         {/* <div>
                     <TestimonialCard testimonialData={testimonialData[0]} />
                 </div> */}
