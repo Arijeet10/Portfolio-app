@@ -74,7 +74,7 @@ const Services = ({ servicesData }) => {
               onClick={() => {
                 handleScroll(-cardWidth);
               }}
-              className="hover:bg-green-500 border border-black rounded-full p-2"
+              className="hover:bg-green-500 hover:border-green-500 shadow-2xl  rounded-full p-2"
             >
               <img
                 src="/left-arrow.png"
@@ -88,7 +88,7 @@ const Services = ({ servicesData }) => {
               onClick={() => {
                 handleScroll(cardWidth);
               }}
-              className="hover:bg-green-500 border border-black rounded-full p-2"
+              className="hover:bg-green-500 hover:border-green-500 shadow-2xl  rounded-full p-2"
             >
               <img
                 src="/right-arrow.png"
