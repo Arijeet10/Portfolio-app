@@ -21,8 +21,8 @@ const Projects = ({ projectData }) => {
           </div>
         </div>
         <motion.div
-          initial={{ opacity: 0, scale: 0, y: [100] }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.5}}
+          whileInView={{ opacity: 1, scale: 1}}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="relative grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4"

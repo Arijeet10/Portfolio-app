@@ -12,46 +12,43 @@ const About = ({ aboutData }) => {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="flex flex-col gap-4 py-8"
+        className="flex flex-col items-center gap-4 pb-8"
       >
-        <div className="text-center lg:text-start break-all  lg:w-2/4">
-          From {aboutData.address}. {aboutData.subTitle}. {desc[0]}
-        </div>
-        <div className="flex items-center justify-start gap-2">
-          <img
-            src="/instagram.png"
-            alt="instagram icon"
-            className="rounded-full p-1 border border-black "
-          />
-          <img
-            src="/x.png"
-            alt="twitter icon"
-            className="rounded-full p-1 border border-black"
-          />
-          <img
-            src="/linkedin.png"
-            alt="linkedin icon"
-            className="rounded-full p-1 border border-black "
-          />
-          <img
-            src="/facebook.png"
-            alt="facebook icon"
-            className="rounded-full p-1 border border-black "
-          />
-        </div>
-        <div className="flex flex-col md:flex-row items-center gap-4 font-bold">
-          <div className="flex flex-col md:flex-row md:gap-0 gap-4 items-center justify-center">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: "400", damping: "10" }}
-              className="border-2 border-black rounded-full px-4 py-2 hover:bg-green-500 hover:text-white"
-            >
-              DOWNLOAD CV
-            </motion.button>
-            <div className="hidden md:block w-20 border-t-2 border-black" />
-            <div className="block md:hidden border-l-2 border-black h-20" />
+        <div className="font-bold text-5xl text-center">
+          <div>
+            ABOUT <span className="text-green-500">ME</span>
           </div>
-          <div>MY SKILLS</div>
+        </div>
+        <div className="flex flex-col items-center gap-4 ">
+          <div className="relative lg:hidden flex justify-center">
+            <img
+              src={aboutData.alternateAvatars[0].url}
+              alt="profile image"
+              className="  rounded-full w-3/4 h-2/4 "
+            />
+            <div className="absolute bottom-[75px] -left-[10px] sm:bottom-[100px] sm:left-[30px] flex items-center justify-center gap-2 px-4 py-2 bg-white border border-black rounded-full">
+              <span className="flex items-start text-5xl">
+                <span className="">{aboutData.exp_year}</span>
+                <span className="text-green-500">+</span>
+              </span>
+              <span className="text-sm">
+                YEARS OF
+                <br />
+                <span className="text-green-500">EXPERIENCE</span>
+              </span>
+            </div>
+            <div className="absolute bottom-[30px] right-[15px] sm:bottom-[50px] sm:right-[80px] lg:right-[20px] flex items-center justify-center gap-2 px-4 py-2 bg-white border border-black rounded-full">
+              <span className="flex text-5xl">{aboutData.some_total}</span>
+              <span className="text-sm">
+                COMPLETED
+                <br />
+                <span className="text-green-500">PROJECTS</span>
+              </span>
+            </div>
+          </div>
+          <div className="text-center text-2xl break-normal  lg:w-2/4">
+            From {aboutData.address}. {aboutData.subTitle}. {desc[0]}
+          </div>
         </div>
       </motion.div>
     </>

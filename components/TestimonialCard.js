@@ -6,11 +6,12 @@ const TestimonialCard = ({ testimonialData }) => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, scale: 0, y: [100] }}
+        
+        initial={{ opacity: 0, scale: 0.5, y: [100] }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="shadow-2xl border border-black rounded-[20px] flex flex-col w-[350px] p-8 justify-between gap-4"
+        className={` shadow-2xl border border-black rounded-[20px] flex flex-col w-[350px] p-8 justify-between gap-4`}
       >
         <div className="">
           <img
