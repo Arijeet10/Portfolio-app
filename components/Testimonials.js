@@ -24,7 +24,7 @@ const Testimonials = ({ testimonialData }) => {
     const newScrollPosi = scrollPosi;
     setTimeout(() => {
       carouselRef.current.scrollLeft = newScrollPosi;
-      setScrollPosi(scrollPosi + 50);
+      setScrollPosi(scrollPosi + 60);
 
       setCounter(counter + 1);
 
